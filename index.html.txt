@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fun Click Website</title>
+    <meta charset="UTF-8">
+</head>
+
+<body style="
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:black;
+    color:white;
+    font-family:Arial;
+    cursor:pointer;
+">
+
+<div id="word" style="font-size:50px;">CLICK</div>
+
+<script>
+    var words = [
+        "HELLO",
+        "WAIT",
+        "ONE",
+        "MORE",
+        "CLICK",
+        "KEEP",
+        "GOING",
+        "ALMOST",
+        "THERE",
+        "DONE"
+    ];
+
+    var i = 0;
+
+    document.body.onclick = function () {
+        i = i + 1;
+
+        if (i < words.length) {
+            document.getElementById("word").innerHTML = words[i];
+        } else {
+            document.getElementById("word").innerHTML = "THE END";
+        }
+    };
+</script>
+
+</body>
+</html>
